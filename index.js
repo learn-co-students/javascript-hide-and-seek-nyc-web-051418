@@ -9,16 +9,16 @@ function nestedTarget() {
 
 function deepestChild() {
   const gNode = document.getElementById('grand-node');
-  let childNodeArray = gNode.querySelectorAll('*')
-  let lastChild = childNodeArray[childNodeArray.length - 1]
+  let childNodes = gNode.querySelectorAll('*')
+  let lastChild = childNodes[childNodes.length - 1]
   return lastChild
   // debugger
 }
 
 function increaseRankBy(number) {
-  const rankedArray = document.querySelectorAll('.ranked-list');
+  const rankedNodes = document.querySelectorAll('.ranked-list');
 
-  rankedArray.forEach(list => {
+  rankedNodes.forEach(list => {
     list.querySelectorAll('li').forEach(element => {
       let value = parseInt(element.innerHTML);
       value += number;
